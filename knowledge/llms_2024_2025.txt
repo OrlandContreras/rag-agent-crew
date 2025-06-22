@@ -1,0 +1,30 @@
+Desarrollos en Large Language Models 2024-2025
+
+Los avances más significativos en LLMs durante 2024 y las proyecciones para 2025 incluyen:
+
+1. Modelos Multimodales Avanzados:
+   - GPT-4V y GPT-4 Turbo han demostrado capacidades excepcionales en procesamiento de imágenes y texto
+   - Claude 3 (Opus, Sonnet, Haiku) ofrece diferentes niveles de capacidad y eficiencia
+   - Gemini Pro y Ultra de Google integran múltiples modalidades de forma nativa
+
+2. Modelos Open Source Competitivos:
+   - Llama 3.1 y 3.2 de Meta han alcanzado rendimiento comparable a modelos propietarios
+   - Mistral 7B y Mixtral 8x7B ofrecen excelente rendimiento con menor consumo de recursos
+   - Qwen 2.5 de Alibaba destaca en tareas multilingües y de razonamiento
+
+3. Optimizaciones de Eficiencia:
+   - Técnicas de cuantización mejoran la velocidad de inferencia hasta 4x
+   - Modelos MoE (Mixture of Experts) como Mixtral reducen costos computacionales
+   - Pruning y destilación de modelos mantienen calidad con menor tamaño
+
+4. Capacidades Emergentes 2025:
+   - Razonamiento multi-paso más robusto
+   - Mejor manejo de contextos largos (hasta 2M tokens)
+   - Integración nativa con herramientas y APIs
+   - Capacidades de programación más sofisticadas
+
+5. Aplicaciones Empresariales:
+   - Asistentes de código como GitHub Copilot y CodeWhisperer
+   - Automatización de procesos documentales y legales
+   - Análisis de datos y generación de insights
+   - Soporte al cliente y chatbots inteligentes 

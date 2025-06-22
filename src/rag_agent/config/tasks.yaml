@@ -1,0 +1,72 @@
+research_task:
+  description: >
+    Conduct comprehensive RAG-enhanced research about {topic} for the year {current_year}.
+
+    MANDATORY RAG WORKFLOW:
+    1. FIRST: Search the knowledge base using broad terms like "AI", "LLMs", "machine learning"
+    2. SECOND: Try more specific searches only if broad searches succeed
+    3. THIRD: Use the found information as foundation for your research
+    4. FOURTH: Conduct additional analysis based on available knowledge
+    5. FIFTH: Store any valuable new insights in the knowledge base
+
+    Focus on finding the most recent and relevant information, making sure to:
+    - Leverage existing knowledge base content
+    - Identify gaps in current knowledge
+    - Add new insights to the knowledge base for future use
+
+    Current year context: {current_year}
+  expected_output: >
+    A list with exactly 10 bullet points about {topic}. Format:
+
+    **Knowledge Base Findings:**
+    1. [First finding from RAG search]
+    2. [Second finding from RAG search]
+    3. [Third finding from RAG search]
+    4. [Fourth finding from RAG search]
+    5. [Fifth finding from RAG search]
+
+    **Additional Research:**
+    6. [Analysis based on knowledge base]
+    7. [Insights derived from findings]
+    8. [Trends identified]
+    9. [Applications mentioned]
+    10. [Future implications]
+
+    **STOP HERE - Do not use more tools after creating this list.**
+  agent: researcher
+
+reporting_task:
+  description: >
+    Create a detailed RAG-enhanced report based on the research findings about {topic}.
+
+    MANDATORY RAG WORKFLOW (LIMIT: Use each tool maximum 3 times):
+    1. FIRST: Search the knowledge base for supporting information (max 2 searches)
+    2. SECOND: Get specific context if needed (max 1 get_rag_context)
+    3. THIRD: Create the report immediately with available information
+
+    IMPORTANT: After gathering initial information, create the report. Do NOT search endlessly.
+
+    The report should:
+    - Integrate information from both research findings and knowledge base
+    - Show clear attribution between knowledge base content and new research
+    - Be comprehensive and well-structured
+    - Include a section on "Knowledge Base Insights" highlighting key information from stored knowledge
+  expected_output: >
+    A markdown report with exactly this structure:
+
+    # {topic} Report
+
+    ## Executive Summary
+    [2-3 sentences based on available information]
+
+    ## Key Findings
+    [3-4 bullet points from knowledge base]
+
+    ## Analysis  
+    [2-3 paragraphs expanding on the findings]
+
+    ## Conclusion
+    [1-2 sentences summary]
+
+    **IMPORTANT: Create this report with available information. Do not search for more data.**
+  agent: reporting_analyst

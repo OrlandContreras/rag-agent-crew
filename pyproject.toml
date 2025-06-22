@@ -1,0 +1,44 @@
+[project]
+name = "rag_agent"
+version = "0.1.0"
+description = "Sistema Multi-Agente RAG 100% Local usando CrewAI, Ollama y Qdrant"
+authors = [
+    { name = "RAG Agent Crew Contributors", email = "contributors@example.com" },
+]
+license = { text = "MIT" }
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+keywords = ["ai", "rag", "multi-agent", "local", "ollama", "qdrant", "crewai"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "crewai[tools]>=0.130.0,<1.0.0",
+    "qdrant-client>=1.7.0",
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+    "numpy>=1.24.0",
+]
+
+[project.scripts]
+rag_agent = "rag_agent.main:run"
+run_crew = "rag_agent.main:run"
+train = "rag_agent.main:train"
+replay = "rag_agent.main:replay"
+test = "rag_agent.main:test"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.crewai]
+type = "crew"

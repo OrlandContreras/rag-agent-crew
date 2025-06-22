@@ -1,0 +1,55 @@
+Bases de Datos Vectoriales y Embeddings: Fundamentos para RAG
+
+Las bases de datos vectoriales son componentes esenciales en sistemas RAG modernos, permitiendo búsquedas semánticas eficientes sobre grandes volúmenes de información:
+
+1. Conceptos Fundamentales:
+   - Los embeddings convierten texto en vectores numéricos de alta dimensión
+   - La similitud semántica se mide usando distancias matemáticas (coseno, euclidiana)
+   - Indexación especializada permite búsquedas rápidas en millones de vectores
+   - Filtrado por metadatos combina búsqueda semántica con criterios específicos
+
+2. Principales Bases de Datos Vectoriales:
+   - Qdrant: Open source, alta performance, escalable horizontalmente
+   - Pinecone: Servicio managed, fácil integración, optimizado para producción
+   - Weaviate: GraphQL API, soporte multimodal, capacidades de ML integradas
+   - Chroma: Lightweight, ideal para desarrollo y prototipos
+   - Milvus: Distribuido, alta escalabilidad, soporte para múltiples índices
+
+3. Modelos de Embeddings Populares:
+   - OpenAI text-embedding-ada-002: Versátil, buena calidad general
+   - Sentence-BERT: Open source, eficiente, múltiples variantes
+   - nomic-embed-text: Optimizado para RAG, ejecutable localmente
+   - E5 (text-embedding-3): Multilingüe, alta precisión
+   - BGE (BAAI General Embedding): Excelente para textos largos
+
+4. Métricas de Distancia:
+   - Coseno: Ideal para embeddings normalizados, ignora magnitud
+   - Euclidiana (L2): Considera magnitud y dirección del vector
+   - Producto punto: Rápido pero requiere vectores normalizados
+   - Manhattan (L1): Más robusto a outliers, menos común
+
+5. Optimizaciones de Performance:
+   - Índices HNSW (Hierarchical Navigable Small World) para búsquedas aproximadas
+   - Cuantización de vectores reduce memoria y acelera búsquedas
+   - Sharding y particionado para escalabilidad horizontal
+   - Caching inteligente de consultas frecuentes
+
+6. Casos de Uso Especializados:
+   - Búsqueda semántica en documentos corporativos
+   - Sistemas de recomendación personalizados
+   - Detección de duplicados y contenido similar
+   - Clasificación automática de contenido
+   - Análisis de sentimiento contextual
+
+7. Consideraciones de Implementación:
+   - Elección del modelo de embedding según dominio y idioma
+   - Configuración de parámetros de indexación para balance velocidad/precisión
+   - Estrategias de chunking para documentos largos
+   - Gestión de versiones y actualizaciones de embeddings
+   - Monitoreo de drift en calidad de embeddings
+
+8. Integración con Frameworks RAG:
+   - LangChain: Abstracciones para múltiples proveedores
+   - LlamaIndex: Optimizaciones específicas para recuperación
+   - Haystack: Pipeline completo de procesamiento de documentos
+   - Semantic Kernel: Integración con ecosistema Microsoft 
